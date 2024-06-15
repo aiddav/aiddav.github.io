@@ -12,14 +12,16 @@
             background-color: white;
             margin: 0;
             padding: 0;
+            display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             flex-direction: column;
         }
         .container {
             text-align: left;
             max-width: 1000px;
+            width: 100%; /* Ensure the container takes full width */
             padding: 20px;
         }
         h1, h2, h3 {
@@ -46,13 +48,17 @@
         }
         .footer {
             display: flex;
-            align-items: center;
+            flex-direction: column; /* Stack text and image vertically */
+            align-items: flex-start; /* Align items to the start (left) */
             margin-top: 20px;
+            width: 100%; /* Make footer full width */
         }
         .footer img {
-            max-height: 50%
-            max-width: 50%; /* Make the image half the size */
-            margin-left: 20px; /* Add some margin to separate text and image */
+            width: 100%; /* Make the image take full width of the container */
+            height: auto;
+        }
+        .footer .text {
+            width: 100%; /* Ensure text takes full width */
         }
     </style>
 </head>
@@ -64,8 +70,10 @@
         <h2><a href="thoughts.html">Thoughts</a></h2>
     </div>
     <div class="footer">
+        <div class="text">
+            <p>Here is some additional information aligned with the photo.</p>
+        </div>
         <img src="personalphoto.jpeg" alt="Personal Photo">
     </div>
 </body>
 </html>
-
