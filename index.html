@@ -12,9 +12,10 @@
             background-color: white;
             margin: 0;
             padding: 0;
+            display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             flex-direction: column;
         }
         .container {
@@ -50,8 +51,8 @@
             margin-top: 20px;
         }
         .footer img {
-            max-height: 10%
-            max-width: 10%; /* Make the image half the size */
+            max-width: 50%; /* Make the image half the size */
+            height: auto;
             margin-left: 20px; /* Add some margin to separate text and image */
         }
     </style>
@@ -64,6 +65,9 @@
         <h2><a href="thoughts.html">Thoughts</a></h2>
     </div>
     <div class="footer">
+        <div class="text">
+            <p>Here is some additional information aligned with the photo.</p>
+        </div>
         <img src="personalphoto.jpeg" alt="Personal Photo">
     </div>
 </body>
