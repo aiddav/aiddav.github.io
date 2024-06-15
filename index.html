@@ -12,17 +12,15 @@
             background-color: white;
             margin: 0;
             padding: 0;
-            display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            height: 100vh;
             flex-direction: column;
         }
         .container {
             text-align: left;
             max-width: 1000px;
             padding: 20px;
-            width: 100%;
         }
         h1, h2, h3 {
             color: black;
@@ -47,13 +45,14 @@
             color: black;
         }
         .footer {
-            margin-top: 20px;
             display: flex;
             align-items: center;
+            margin-top: 20px;
         }
         .footer img {
-            width: 10%; /* Make the image take the full width of the container */
-            height: auto;
+            max-height: 10%
+            max-width: 10%; /* Make the image half the size */
+            margin-left: 20px; /* Add some margin to separate text and image */
         }
     </style>
 </head>
@@ -63,9 +62,9 @@
         <h2><a href="about.html">About Me</a></h2>
         <h2><a href="projects.html">Projects</a></h2>
         <h2><a href="thoughts.html">Thoughts</a></h2>
-        <div class="footer">
-            <img src="personalphoto.jpeg" alt="Personal Photo">
-        </div>
+    </div>
+    <div class="footer">
+        <img src="personalphoto.jpeg" alt="Personal Photo">
     </div>
 </body>
 </html>
