@@ -47,16 +47,10 @@
             margin-bottom: 10px; /* Adjust the value as needed */
             color: black;
         }
-        .header-image {
-            width: 100%;
-            max-width: 1000px;
-            height: auto;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
         .footer {
             margin-top: 30px;
             display: flex;
+            flex-direction: column;
             justify-content: left;
             width: 100%;
         }
@@ -64,17 +58,23 @@
             width: 25%;
             height: auto;
         }
+        .cityscape-image {
+            width: 50%;
+            height: auto;
+            margin-top: 20px;
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="london-cityscape-bw.jpg" alt="London Cityscape" class="header-image">
         <h1>Aidan Davies</h1>
         <p><a href="about.html">About Me</a></p>
         <p><a href="projects.html">Projects</a></p>
         <p><a href="thoughts.html">Thoughts</a></p>
         <div class="footer">
             <img src="1628355818831.jpeg" alt="Personal Photo">
+            <img src="london-cityscape-bw.jpg" alt="London Cityscape" class="cityscape-image">
         </div>
     </div>
 </body>
