@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Studium Partners advises independent schools, school groups, operators, developers and investors on international expansion, acquisitions, partnerships and campus development."
+    />
+    <meta property="og:title" content="Studium Partners" />
+    <meta
+      property="og:description"
+      content="Discreet education advisory for independent schools, groups, operators and capital partners."
+    />
+    <meta property="og:type" content="website" />
+    <title>Studium Partners</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,500..800,35,1&family=Newsreader:opsz,wght@6..72,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+      :root {
+        --ink: #06120d;
+        --green: #11271b;
+        --moss: #2d5a3c;
+        --paper: #f4f5ec;
+        --paper-2: #e7ebda;
+        --line: rgba(244, 245, 236, 0.22);
+        --red: #ff4a2f;
+        --gold: #d5ae54;
+        --mint: #b9f2bf;
+        --shadow: rgba(3, 12, 8, 0.38);
+        --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+        --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+        --mono: "IBM Plex Mono", "Courier New", monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--paper);
+        background:
+          linear-gradient(90deg, rgba(255, 74, 47, 0.08) 1px, transparent 1px),
+          linear-gradient(rgba(213, 174, 84, 0.08) 1px, transparent 1px),
+          radial-gradient(circle at 86% 12%, rgba(185, 242, 191, 0.13), transparent 28rem),
+          var(--ink);
+        background-size: 42px 42px, 42px 42px, auto, auto;
+        font-family: var(--body);
+        font-size: 18px;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration-color: var(--red);
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.18em;
+      }
+
+      a:hover {
+        color: var(--mint);
+      }
+
+      .masthead {
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1.2rem clamp(1rem, 3vw, 3rem);
+        font-family: var(--mono);
+        font-size: 0.76rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .mark {
+        display: inline-grid;
+        place-items: center;
+        width: 2.4rem;
+        height: 2.4rem;
+        border: 1px solid var(--gold);
+        color: var(--gold);
+        font-family: var(--display);
+        font-size: 1.1rem;
+        font-weight: 800;
+      }
+
+      .masthead__brand {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+
+      .masthead nav {
+        display: flex;
+        align-items: center;
+        gap: clamp(0.8rem, 2vw, 1.4rem);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 88svh;
+        display: grid;
+        align-items: end;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(213, 174, 84, 0.38);
+        isolation: isolate;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -3;
+        background-image: url("../london-cityscape-bw.jpg");
+        background-position: center;
+        background-size: cover;
+        filter: contrast(1.18) saturate(0.25);
+        transform: scale(1.04);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background:
+          linear-gradient(90deg, rgba(6, 18, 13, 0.9), rgba(6, 18, 13, 0.56) 54%, rgba(6, 18, 13, 0.78)),
+          linear-gradient(0deg, rgba(6, 18, 13, 0.98), transparent 52%),
+          radial-gradient(circle at 76% 20%, rgba(255, 74, 47, 0.22), transparent 28rem);
+      }
+
+      .hero__content {
+        width: min(1100px, 100%);
+        padding: 7.5rem clamp(1rem, 5vw, 5rem) 5.2rem;
+      }
+
+      .eyebrow {
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin: 0 0 1rem;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: var(--display);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        max-width: 11ch;
+        font-size: clamp(4rem, 14vw, 11rem);
+        font-weight: 800;
+        font-variation-settings: "SOFT" 35, "WONK" 1;
+      }
+
+      .hero__line {
+        display: block;
+        color: var(--red);
+      }
+
+      .hero__text {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(18rem, 0.55fr);
+        gap: clamp(1.4rem, 5vw, 4rem);
+        align-items: end;
+        margin-top: 2rem;
+      }
+
+      .hero__text p {
+        max-width: 38rem;
+        margin: 0;
+        font-size: clamp(1.15rem, 2.4vw, 1.7rem);
+      }
+
+      .hero__brief {
+        border-left: 2px solid var(--red);
+        padding-left: 1rem;
+        font-family: var(--mono);
+        font-size: 0.82rem;
+        color: var(--paper-2);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(1rem);
+        animation: reveal 880ms cubic-bezier(0.2, 0.7, 0.1, 1) forwards;
+      }
+
+      .delay-1 {
+        animation-delay: 120ms;
+      }
+
+      .delay-2 {
+        animation-delay: 260ms;
+      }
+
+      .delay-3 {
+        animation-delay: 420ms;
+      }
+
+      @keyframes reveal {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      main {
+        background:
+          linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), rgba(6, 18, 13, 0.1) calc(100% - 1px)),
+          var(--paper);
+        color: var(--ink);
+      }
+
+      .band {
+        padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 5vw, 5rem);
+      }
+
+      .band--dark {
+        background:
+          radial-gradient(circle at 12% 10%, rgba(255, 74, 47, 0.16), transparent 24rem),
+          linear-gradient(135deg, var(--green), var(--ink));
+        color: var(--paper);
+      }
+
+      .section-grid {
+        width: min(1180px, 100%);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(13rem, 0.44fr) minmax(0, 1fr);
+        gap: clamp(2rem, 6vw, 6rem);
+      }
+
+      .section-kicker {
+        position: sticky;
+        top: 1.4rem;
+        align-self: start;
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: var(--moss);
+      }
+
+      .band--dark .section-kicker {
+        color: var(--gold);
+      }
+
+      .statement {
+        max-width: 58rem;
+        font-size: clamp(1.65rem, 4.4vw, 4.5rem);
+        line-height: 1.02;
+        font-family: var(--display);
+        font-weight: 650;
+      }
+
+      .statement em {
+        color: var(--red);
+        font-style: normal;
+      }
+
+      .offer-list {
+        display: grid;
+        gap: 1px;
+        background: rgba(6, 18, 13, 0.2);
+        border: 1px solid rgba(6, 18, 13, 0.2);
+      }
+
+      .offer-item {
+        display: grid;
+        grid-template-columns: 9rem minmax(0, 1fr);
+        gap: 1.2rem;
+        padding: clamp(1.1rem, 2.4vw, 1.8rem);
+        background: var(--paper);
+      }
+
+      .offer-item b {
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--red);
+      }
+
+      .offer-item p {
+        margin: 0;
+        font-size: clamp(1.1rem, 2vw, 1.35rem);
+      }
+
+      .case-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .case {
+        min-height: 23rem;
+        border: 1px solid rgba(244, 245, 236, 0.28);
+        padding: 1.2rem;
+        display: grid;
+        align-content: space-between;
+        background:
+          linear-gradient(180deg, rgba(244, 245, 236, 0.08), transparent),
+          rgba(244, 245, 236, 0.03);
+      }
+
+      .case span {
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+
+      .case h3 {
+        margin-top: 1rem;
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        line-height: 1;
+      }
+
+      .case p {
+        margin: 1.2rem 0 0;
+        color: var(--paper-2);
+      }
+
+      .proof {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        border-top: 1px solid rgba(6, 18, 13, 0.18);
+        border-left: 1px solid rgba(6, 18, 13, 0.18);
+      }
+
+      .proof div {
+        min-height: 12rem;
+        padding: 1rem;
+        border-right: 1px solid rgba(6, 18, 13, 0.18);
+        border-bottom: 1px solid rgba(6, 18, 13, 0.18);
+        display: grid;
+        align-content: space-between;
+      }
+
+      .proof strong {
+        display: block;
+        font-family: var(--display);
+        font-size: clamp(2.3rem, 6vw, 5rem);
+        line-height: 0.9;
+        color: var(--moss);
+      }
+
+      .proof span {
+        font-family: var(--mono);
+        font-size: 0.76rem;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+      }
+
+      .contact {
+        display: grid;
+        grid-template-columns: minmax(0, 0.75fr) minmax(18rem, 0.35fr);
+        gap: clamp(2rem, 6vw, 5rem);
+        align-items: end;
+      }
+
+      .contact h2 {
+        font-size: clamp(2.8rem, 8vw, 7rem);
+      }
+
+      .contact p {
+        max-width: 38rem;
+        font-size: clamp(1.15rem, 2vw, 1.35rem);
+      }
+
+      .button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 3.4rem;
+        padding: 0.9rem 1.2rem;
+        border: 1px solid var(--red);
+        background: var(--red);
+        color: var(--paper);
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        box-shadow: 0 1rem 2rem var(--shadow);
+        transition: transform 220ms ease, background 220ms ease, color 220ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-3px);
+        background: var(--mint);
+        color: var(--ink);
+        border-color: var(--mint);
+      }
+
+      .signature {
+        font-family: var(--mono);
+        color: var(--gold);
+      }
+
+      @media (max-width: 860px) {
+        body {
+          font-size: 16px;
+        }
+
+        .masthead {
+          position: absolute;
+        }
+
+        .masthead nav {
+          display: none;
+        }
+
+        .hero {
+          min-height: 91svh;
+        }
+
+        .hero__text,
+        .section-grid,
+        .contact {
+          grid-template-columns: 1fr;
+        }
+
+        .hero__brief {
+          max-width: 24rem;
+        }
+
+        .section-kicker {
+          position: static;
+        }
+
+        .offer-item {
+          grid-template-columns: 1fr;
+        }
+
+        .case-grid,
+        .proof {
+          grid-template-columns: 1fr;
+        }
+
+        .case {
+          min-height: auto;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="masthead__brand">
+        <span class="mark">S</span>
+        <span>Studium Partners</span>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#offer">Offer</a>
+        <a href="#casework">Casework</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero__content">
+        <p class="eyebrow reveal">Education strategy / development / acquisitions</p>
+        <h1 id="page-title" class="reveal delay-1">Studium <span class="hero__line">Partners</span></h1>
+        <div class="hero__text">
+          <p class="reveal delay-2">
+            Discreet advisory for independent schools, school groups, operators, developers and investors
+            considering growth beyond the familiar map.
+          </p>
+          <div class="hero__brief reveal delay-3">
+            International expansion. Campus development. Acquisitions. Partner introductions. Board-ready
+            judgement when the sector is moving faster than the timetable.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="band" id="offer">
+        <div class="section-grid">
+          <div class="section-kicker">Advisory posture</div>
+          <div>
+            <div class="statement">
+              We help education leaders decide <em>whether</em> to move, <em>where</em> to move, and
+              <em>with whom</em>.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="section-grid">
+          <div class="section-kicker">What we do</div>
+          <div class="offer-list">
+            <article class="offer-item">
+              <b>01 / Market</b>
+              <p>International market screening, competitor mapping, regulatory review and first-market prioritisation.</p>
+            </article>
+            <article class="offer-item">
+              <b>02 / Board</b>
+              <p>Decision papers for governors, trustees, owners and investment committees, built around practical options.</p>
+            </article>
+            <article class="offer-item">
+              <b>03 / Property</b>
+              <p>Campus, satellite, prep-to-senior, all-through and estate-led development strategy.</p>
+            </article>
+            <article class="offer-item">
+              <b>04 / Partners</b>
+              <p>Introductions to operators, founding leadership, real estate partners, capital providers and specialist advisers.</p>
+            </article>
+            <article class="offer-item">
+              <b>05 / Deals</b>
+              <p>Acquisition screening, partnership options, governance design and post-deal integration priorities.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--dark" id="casework">
+        <div class="section-grid">
+          <div class="section-kicker">Selected work</div>
+          <div class="case-grid">
+            <article class="case">
+              <div>
+                <span>Confidential</span>
+                <h3>Leading UK public school</h3>
+                <p>
+                  Market screening, governance analysis, financial upside and partner pathways for a first international
+                  expansion decision.
+                </p>
+              </div>
+              <p>Output: a board-ready options paper and shortlist of viable routes.</p>
+            </article>
+            <article class="case">
+              <div>
+                <span>Sector signal</span>
+                <h3>Prep consolidation</h3>
+                <p>
+                  Senior schools and groups are strengthening admissions pipelines through mergers, acquisitions and
+                  school-family structures.
+                </p>
+              </div>
+              <p>Use case: target mapping, stakeholder logic and integration priorities.</p>
+            </article>
+            <article class="case">
+              <div>
+                <span>Development</span>
+                <h3>Estate-led growth</h3>
+                <p>
+                  Land, planning and community development are becoming part of the education strategy conversation.
+                </p>
+              </div>
+              <p>Use case: site feasibility, operator fit and capital partner introductions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="section-grid">
+          <div class="section-kicker">Operating facts</div>
+          <div class="proof">
+            <div>
+              <strong>2-3</strong>
+              <span>week opportunity scans</span>
+            </div>
+            <div>
+              <strong>6-8</strong>
+              <span>week feasibility papers</span>
+            </div>
+            <div>
+              <strong>4</strong>
+              <span>week partner sprints</span>
+            </div>
+            <div>
+              <strong>1</strong>
+              <span>clear recommendation</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--dark" id="contact">
+        <div class="contact">
+          <div>
+            <p class="eyebrow">For a quiet first conversation</p>
+            <h2>Start with the decision.</h2>
+            <p>
+              Studium works best when a school, operator or capital partner needs a compact answer to a
+              consequential question: expand, partner, acquire, develop, or wait.
+            </p>
+          </div>
+          <div>
+            <a class="button" href="mailto:aidan@studiumpartners.co.uk?subject=Studium%20Partners%20conversation">
+              Contact Aidan
+            </a>
+            <p class="signature">Aidan Davies<br />Principal, Studium Partners</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
