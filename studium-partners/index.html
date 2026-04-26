@@ -5,32 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Studium Partners advises independent schools, school groups, operators, developers and investors on international expansion, acquisitions, partnerships and campus development."
+      content="Studium Partners advises independent schools and school groups on clear, evidence-led education strategy."
     />
     <meta property="og:title" content="Studium Partners" />
     <meta
       property="og:description"
-      content="Discreet education advisory for independent schools, groups, operators and capital partners."
+      content="Simple, discreet education strategy for independent schools and school groups."
     />
     <meta property="og:type" content="website" />
     <title>Studium Partners</title>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,500..800,35,1&family=Newsreader:opsz,wght@6..72,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
-
       :root {
-        --ink: #06120d;
-        --green: #11271b;
-        --moss: #2d5a3c;
-        --paper: #f4f5ec;
-        --paper-2: #e7ebda;
-        --line: rgba(244, 245, 236, 0.22);
-        --red: #ff4a2f;
-        --gold: #d5ae54;
-        --mint: #b9f2bf;
-        --shadow: rgba(3, 12, 8, 0.38);
-        --display: "Fraunces", "Iowan Old Style", Georgia, serif;
-        --body: "Newsreader", "Iowan Old Style", Georgia, serif;
-        --mono: "IBM Plex Mono", "Courier New", monospace;
+        --ink: #101711;
+        --paper: #f6f1e5;
+        --font: Georgia, "Times New Roman", serif;
       }
 
       * {
@@ -44,26 +32,21 @@
       body {
         margin: 0;
         color: var(--paper);
-        background:
-          linear-gradient(90deg, rgba(255, 74, 47, 0.08) 1px, transparent 1px),
-          linear-gradient(rgba(213, 174, 84, 0.08) 1px, transparent 1px),
-          radial-gradient(circle at 86% 12%, rgba(185, 242, 191, 0.13), transparent 28rem),
-          var(--ink);
-        background-size: 42px 42px, 42px 42px, auto, auto;
-        font-family: var(--body);
+        background: var(--ink);
+        font-family: var(--font);
         font-size: 18px;
         line-height: 1.55;
       }
 
       a {
         color: inherit;
-        text-decoration-color: var(--red);
+        text-decoration-color: currentColor;
         text-decoration-thickness: 0.08em;
         text-underline-offset: 0.18em;
       }
 
       a:hover {
-        color: var(--mint);
+        opacity: 0.72;
       }
 
       .masthead {
@@ -77,7 +60,6 @@
         justify-content: space-between;
         gap: 1rem;
         padding: 1.2rem clamp(1rem, 3vw, 3rem);
-        font-family: var(--mono);
         font-size: 0.76rem;
         letter-spacing: 0.04em;
         text-transform: uppercase;
@@ -88,9 +70,9 @@
         place-items: center;
         width: 2.4rem;
         height: 2.4rem;
-        border: 1px solid var(--gold);
-        color: var(--gold);
-        font-family: var(--display);
+        border: 1px solid var(--paper);
+        color: var(--paper);
+        font-family: var(--font);
         font-size: 1.1rem;
         font-weight: 800;
       }
@@ -113,7 +95,7 @@
         display: grid;
         align-items: end;
         overflow: hidden;
-        border-bottom: 1px solid rgba(213, 174, 84, 0.38);
+        border-bottom: 1px solid var(--paper);
         isolation: isolate;
       }
 
@@ -125,7 +107,7 @@
         background-image: url("../london-cityscape-bw.jpg");
         background-position: center;
         background-size: cover;
-        filter: contrast(1.18) saturate(0.25);
+        filter: contrast(1.1) grayscale(1);
         transform: scale(1.04);
       }
 
@@ -134,10 +116,8 @@
         position: absolute;
         inset: 0;
         z-index: -2;
-        background:
-          linear-gradient(90deg, rgba(6, 18, 13, 0.9), rgba(6, 18, 13, 0.56) 54%, rgba(6, 18, 13, 0.78)),
-          linear-gradient(0deg, rgba(6, 18, 13, 0.98), transparent 52%),
-          radial-gradient(circle at 76% 20%, rgba(255, 74, 47, 0.22), transparent 28rem);
+        background: var(--ink);
+        opacity: 0.78;
       }
 
       .hero__content {
@@ -146,11 +126,10 @@
       }
 
       .eyebrow {
-        font-family: var(--mono);
         font-size: 0.78rem;
         letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: var(--gold);
+        color: var(--paper);
         margin: 0 0 1rem;
       }
 
@@ -158,7 +137,7 @@
       h2,
       h3 {
         margin: 0;
-        font-family: var(--display);
+        font-family: var(--font);
         line-height: 0.98;
         letter-spacing: 0;
       }
@@ -167,12 +146,11 @@
         max-width: 11ch;
         font-size: clamp(4rem, 14vw, 11rem);
         font-weight: 800;
-        font-variation-settings: "SOFT" 35, "WONK" 1;
       }
 
       .hero__line {
         display: block;
-        color: var(--red);
+        color: var(--paper);
       }
 
       .hero__text {
@@ -190,11 +168,10 @@
       }
 
       .hero__brief {
-        border-left: 2px solid var(--red);
+        border-left: 2px solid var(--paper);
         padding-left: 1rem;
-        font-family: var(--mono);
         font-size: 0.82rem;
-        color: var(--paper-2);
+        color: var(--paper);
       }
 
       .reveal {
@@ -223,9 +200,7 @@
       }
 
       main {
-        background:
-          linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), rgba(6, 18, 13, 0.1) calc(100% - 1px)),
-          var(--paper);
+        background: var(--paper);
         color: var(--ink);
       }
 
@@ -234,9 +209,7 @@
       }
 
       .band--dark {
-        background:
-          radial-gradient(circle at 12% 10%, rgba(255, 74, 47, 0.16), transparent 24rem),
-          linear-gradient(135deg, var(--green), var(--ink));
+        background: var(--ink);
         color: var(--paper);
       }
 
@@ -252,35 +225,34 @@
         position: sticky;
         top: 1.4rem;
         align-self: start;
-        font-family: var(--mono);
         font-size: 0.78rem;
         letter-spacing: 0.13em;
         text-transform: uppercase;
-        color: var(--moss);
+        color: var(--ink);
       }
 
       .band--dark .section-kicker {
-        color: var(--gold);
+        color: var(--paper);
       }
 
       .statement {
         max-width: 58rem;
         font-size: clamp(1.65rem, 4.4vw, 4.5rem);
         line-height: 1.02;
-        font-family: var(--display);
+        font-family: var(--font);
         font-weight: 650;
       }
 
       .statement em {
-        color: var(--red);
+        color: var(--ink);
         font-style: normal;
       }
 
       .offer-list {
         display: grid;
         gap: 1px;
-        background: rgba(6, 18, 13, 0.2);
-        border: 1px solid rgba(6, 18, 13, 0.2);
+        background: var(--ink);
+        border: 1px solid var(--ink);
       }
 
       .offer-item {
@@ -292,11 +264,10 @@
       }
 
       .offer-item b {
-        font-family: var(--mono);
         font-size: 0.78rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: var(--red);
+        color: var(--ink);
       }
 
       .offer-item p {
@@ -312,21 +283,18 @@
 
       .case {
         min-height: 23rem;
-        border: 1px solid rgba(244, 245, 236, 0.28);
+        border: 1px solid var(--paper);
         padding: 1.2rem;
         display: grid;
         align-content: space-between;
-        background:
-          linear-gradient(180deg, rgba(244, 245, 236, 0.08), transparent),
-          rgba(244, 245, 236, 0.03);
+        background: var(--ink);
       }
 
       .case span {
-        font-family: var(--mono);
         font-size: 0.72rem;
         letter-spacing: 0.12em;
         text-transform: uppercase;
-        color: var(--gold);
+        color: var(--paper);
       }
 
       .case h3 {
@@ -337,35 +305,34 @@
 
       .case p {
         margin: 1.2rem 0 0;
-        color: var(--paper-2);
+        color: var(--paper);
       }
 
       .proof {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        border-top: 1px solid rgba(6, 18, 13, 0.18);
-        border-left: 1px solid rgba(6, 18, 13, 0.18);
+        border-top: 1px solid var(--ink);
+        border-left: 1px solid var(--ink);
       }
 
       .proof div {
         min-height: 12rem;
         padding: 1rem;
-        border-right: 1px solid rgba(6, 18, 13, 0.18);
-        border-bottom: 1px solid rgba(6, 18, 13, 0.18);
+        border-right: 1px solid var(--ink);
+        border-bottom: 1px solid var(--ink);
         display: grid;
         align-content: space-between;
       }
 
       .proof strong {
         display: block;
-        font-family: var(--display);
+        font-family: var(--font);
         font-size: clamp(2.3rem, 6vw, 5rem);
         line-height: 0.9;
-        color: var(--moss);
+        color: var(--ink);
       }
 
       .proof span {
-        font-family: var(--mono);
         font-size: 0.76rem;
         text-transform: uppercase;
         letter-spacing: 0.09em;
@@ -393,28 +360,26 @@
         align-items: center;
         min-height: 3.4rem;
         padding: 0.9rem 1.2rem;
-        border: 1px solid var(--red);
-        background: var(--red);
-        color: var(--paper);
-        font-family: var(--mono);
+        border: 1px solid var(--paper);
+        background: var(--paper);
+        color: var(--ink);
         font-size: 0.78rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         text-decoration: none;
-        box-shadow: 0 1rem 2rem var(--shadow);
+        box-shadow: none;
         transition: transform 220ms ease, background 220ms ease, color 220ms ease;
       }
 
       .button:hover {
         transform: translateY(-3px);
-        background: var(--mint);
-        color: var(--ink);
-        border-color: var(--mint);
+        background: var(--ink);
+        color: var(--paper);
+        border-color: var(--paper);
       }
 
       .signature {
-        font-family: var(--mono);
-        color: var(--gold);
+        color: var(--paper);
       }
 
       @media (max-width: 860px) {
@@ -489,16 +454,14 @@
 
     <section class="hero" aria-labelledby="page-title">
       <div class="hero__content">
-        <p class="eyebrow reveal">Education strategy / development / acquisitions</p>
+        <p class="eyebrow reveal">Education strategy</p>
         <h1 id="page-title" class="reveal delay-1">Studium <span class="hero__line">Partners</span></h1>
         <div class="hero__text">
           <p class="reveal delay-2">
-            Discreet advisory for independent schools, school groups, operators, developers and investors
-            considering growth beyond the familiar map.
+            Simple, discreet strategy advice for independent schools and school groups.
           </p>
           <div class="hero__brief reveal delay-3">
-            International expansion. Campus development. Acquisitions. Partner introductions. Board-ready
-            judgement when the sector is moving faster than the timetable.
+            We help leaders clarify the question, test the evidence and make a decision they can defend.
           </div>
         </div>
       </div>
@@ -510,8 +473,7 @@
           <div class="section-kicker">Advisory posture</div>
           <div>
             <div class="statement">
-              We help education leaders decide <em>whether</em> to move, <em>where</em> to move, and
-              <em>with whom</em>.
+              Clear education strategy for schools facing important choices.
             </div>
           </div>
         </div>
@@ -522,24 +484,20 @@
           <div class="section-kicker">What we do</div>
           <div class="offer-list">
             <article class="offer-item">
-              <b>01 / Market</b>
-              <p>International market screening, competitor mapping, regulatory review and first-market prioritisation.</p>
+              <b>01 / Question</b>
+              <p>Define the strategic question and the decision that needs to be made.</p>
             </article>
             <article class="offer-item">
-              <b>02 / Board</b>
-              <p>Decision papers for governors, trustees, owners and investment committees, built around practical options.</p>
+              <b>02 / Evidence</b>
+              <p>Assess demand, competitors, families, finances and the wider education market.</p>
             </article>
             <article class="offer-item">
-              <b>03 / Property</b>
-              <p>Campus, satellite, prep-to-senior, all-through and estate-led development strategy.</p>
+              <b>03 / Options</b>
+              <p>Set out clear choices, trade-offs, risks and implications for the school.</p>
             </article>
             <article class="offer-item">
-              <b>04 / Partners</b>
-              <p>Introductions to operators, founding leadership, real estate partners, capital providers and specialist advisers.</p>
-            </article>
-            <article class="offer-item">
-              <b>05 / Deals</b>
-              <p>Acquisition screening, partnership options, governance design and post-deal integration priorities.</p>
+              <b>04 / Decision</b>
+              <p>Prepare a board-ready recommendation with practical next steps.</p>
             </article>
           </div>
         </div>
@@ -552,34 +510,32 @@
             <article class="case">
               <div>
                 <span>Confidential</span>
-                <h3>Leading UK public school</h3>
+                <h3>Independent school strategy</h3>
                 <p>
-                  Market screening, governance analysis, financial upside and partner pathways for a first international
-                  expansion decision.
+                  A confidential review of strategic routes, evidence, risks and governance implications for a leading school.
                 </p>
               </div>
-              <p>Output: a board-ready options paper and shortlist of viable routes.</p>
+              <p>Output: a board-ready strategy paper and clear recommendation.</p>
             </article>
             <article class="case">
               <div>
-                <span>Sector signal</span>
-                <h3>Prep consolidation</h3>
+                <span>School group</span>
+                <h3>Portfolio priorities</h3>
                 <p>
-                  Senior schools and groups are strengthening admissions pipelines through mergers, acquisitions and
-                  school-family structures.
+                  A simple view of which markets, schools and age ranges deserved leadership attention.
                 </p>
               </div>
-              <p>Use case: target mapping, stakeholder logic and integration priorities.</p>
+              <p>Use case: prioritisation, evidence gathering and board discussion.</p>
             </article>
             <article class="case">
               <div>
-                <span>Development</span>
-                <h3>Estate-led growth</h3>
+                <span>Board paper</span>
+                <h3>Decision support</h3>
                 <p>
-                  Land, planning and community development are becoming part of the education strategy conversation.
+                  A concise case for governors weighing reputation, demand, finance and operational readiness.
                 </p>
               </div>
-              <p>Use case: site feasibility, operator fit and capital partner introductions.</p>
+              <p>Use case: one paper, one recommendation, practical next steps.</p>
             </article>
           </div>
         </div>
@@ -591,15 +547,15 @@
           <div class="proof">
             <div>
               <strong>2-3</strong>
-              <span>week opportunity scans</span>
+              <span>week strategy scans</span>
             </div>
             <div>
               <strong>6-8</strong>
-              <span>week feasibility papers</span>
+              <span>week strategy reviews</span>
             </div>
             <div>
-              <strong>4</strong>
-              <span>week partner sprints</span>
+              <strong>1</strong>
+              <span>board paper</span>
             </div>
             <div>
               <strong>1</strong>
@@ -613,10 +569,10 @@
         <div class="contact">
           <div>
             <p class="eyebrow">For a quiet first conversation</p>
-            <h2>Start with the decision.</h2>
+            <h2>Start with the question.</h2>
             <p>
-              Studium works best when a school, operator or capital partner needs a compact answer to a
-              consequential question: expand, partner, acquire, develop, or wait.
+              Studium works best when a school needs a compact answer to a strategic question: what to
+              prioritise, where to focus, and what evidence should guide the decision.
             </p>
           </div>
           <div>
