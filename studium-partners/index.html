@@ -212,6 +212,11 @@
         padding: clamp(2.4rem, 5vw, 4rem) clamp(1rem, 5vw, 5rem);
       }
 
+      .band--intro {
+        padding-top: clamp(1.6rem, 3vw, 2.4rem);
+        padding-bottom: clamp(1.8rem, 3.5vw, 2.8rem);
+      }
+
       .band--dark {
         background: var(--ink);
         color: var(--paper);
@@ -223,6 +228,11 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
+      }
+
+      .intro-stack {
+        display: grid;
+        gap: clamp(1.4rem, 2.8vw, 2.2rem);
       }
 
       .section-kicker {
@@ -348,7 +358,8 @@
 
       .team-copy {
         max-width: 48rem;
-        font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+        font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+        line-height: 1.4;
       }
 
       .team-copy p {
@@ -479,34 +490,34 @@
     </section>
 
     <main>
-      <section class="band" id="offer">
-        <div class="section-grid">
-          <div class="section-kicker">What we do</div>
-          <div class="offer-list">
-            <article class="offer-item">
-              <b>01 / International expansion</b>
-              <p>Market entry, positioning, governance options and practical routes to launch.</p>
-            </article>
-            <article class="offer-item">
-              <b>02 / M&amp;A</b>
-              <p>Target screening, diligence questions, investment thesis and integration priorities.</p>
-            </article>
-            <article class="offer-item">
-              <b>03 / Operational improvement</b>
-              <p>Operating-model review, performance improvement and AI-enabled ways of working.</p>
-            </article>
+      <section class="band band--intro" id="offer">
+        <div class="intro-stack">
+          <div class="section-grid">
+            <div class="section-kicker">What we do</div>
+            <div class="offer-list">
+              <article class="offer-item">
+                <b>01 / International expansion</b>
+                <p>Market entry, positioning, governance options and practical routes to launch.</p>
+              </article>
+              <article class="offer-item">
+                <b>02 / M&amp;A</b>
+                <p>Target screening, diligence questions, investment thesis and integration priorities.</p>
+              </article>
+              <article class="offer-item">
+                <b>03 / Operational improvement</b>
+                <p>Operating-model review, performance improvement and AI-enabled ways of working.</p>
+              </article>
+            </div>
           </div>
-        </div>
-      </section>
 
-      <section class="band" id="team">
-        <div class="section-grid">
-          <div class="section-kicker">Team</div>
-          <div class="team-copy">
-            <p>
-              Studium brings together strategy consultants and education specialists with experience across
-              schools, investors, operators and public-sector education systems.
-            </p>
+          <div class="section-grid" id="team">
+            <div class="section-kicker">Team</div>
+            <div class="team-copy">
+              <p>
+                Studium brings together strategy consultants and education specialists with experience across
+                schools, investors, operators and public-sector education systems.
+              </p>
+            </div>
           </div>
         </div>
       </section>
