@@ -59,10 +59,14 @@
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
-        padding: 1.2rem clamp(1rem, 3vw, 3rem);
+        padding: 1.2rem clamp(1rem, 5vw, 5rem);
         font-size: 0.76rem;
         letter-spacing: 0.04em;
         text-transform: uppercase;
+      }
+
+      .masthead nav a {
+        text-decoration: none;
       }
 
       .mark {
@@ -205,7 +209,7 @@
       }
 
       .band {
-        padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 5vw, 5rem);
+        padding: clamp(2.4rem, 5vw, 4rem) clamp(1rem, 5vw, 5rem);
       }
 
       .band--dark {
@@ -214,16 +218,15 @@
       }
 
       .section-grid {
-        width: min(1180px, 100%);
-        margin: 0 auto;
+        width: 100%;
+        margin: 0;
         display: grid;
-        grid-template-columns: minmax(13rem, 0.44fr) minmax(0, 1fr);
-        gap: clamp(2rem, 6vw, 6rem);
+        grid-template-columns: 1fr;
+        gap: 1rem;
       }
 
       .section-kicker {
-        position: sticky;
-        top: 1.4rem;
+        position: static;
         align-self: start;
         font-size: 0.78rem;
         letter-spacing: 0.13em;
@@ -257,9 +260,9 @@
 
       .offer-item {
         display: grid;
-        grid-template-columns: 9rem minmax(0, 1fr);
-        gap: 1.2rem;
-        padding: clamp(1.1rem, 2.4vw, 1.8rem);
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+        padding: clamp(1rem, 1.8vw, 1.45rem);
         background: var(--paper);
       }
 
@@ -272,7 +275,9 @@
 
       .offer-item p {
         margin: 0;
-        font-size: clamp(1.1rem, 2vw, 1.35rem);
+        max-width: 58rem;
+        font-size: clamp(1rem, 1.4vw, 1.2rem);
+        line-height: 1.35;
       }
 
       .case-grid {
@@ -282,9 +287,9 @@
       }
 
       .case {
-        min-height: 23rem;
+        min-height: 20rem;
         border: 1px solid var(--paper);
-        padding: 1.2rem;
+        padding: clamp(1rem, 1.8vw, 1.45rem);
         display: grid;
         align-content: space-between;
         background: var(--ink);
@@ -299,13 +304,16 @@
 
       .case h3 {
         margin-top: 1rem;
-        font-size: clamp(1.5rem, 3vw, 2.5rem);
-        line-height: 1;
+        font-size: clamp(1.45rem, 2vw, 2.2rem);
+        line-height: 1.06;
+        overflow-wrap: break-word;
       }
 
       .case p {
         margin: 1.2rem 0 0;
         color: var(--paper);
+        font-size: clamp(1rem, 1.35vw, 1.18rem);
+        line-height: 1.5;
       }
 
       .proof {
@@ -348,14 +356,7 @@
       }
 
       .contact {
-        display: grid;
-        grid-template-columns: minmax(0, 0.75fr) minmax(18rem, 0.35fr);
-        gap: clamp(2rem, 6vw, 5rem);
-        align-items: end;
-      }
-
-      .contact h2 {
-        font-size: clamp(2.8rem, 8vw, 7rem);
+        width: 100%;
       }
 
       .contact p {
@@ -570,9 +571,6 @@
 
       <section class="band band--dark" id="contact">
         <div class="contact">
-          <div>
-            <h2>Contact us.</h2>
-          </div>
           <div>
             <a class="button" href="mailto:hello@studiumpartners.co.uk?subject=Studium%20Partners%20conversation">
               Contact Us
